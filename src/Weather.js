@@ -1,4 +1,4 @@
-import React from "react";
+import React,  {Fragment} from "react";
 import axios from 'axios';
 
 export default function Weather(props) {
@@ -14,5 +14,6 @@ export default function Weather(props) {
 
     axios.get(apiUrl).then(handleResponse);
 
-    return (<h2>Slava Ukraini!</h2>);
+    return (<Fragment><h2>Slava Ukraini!</h2>
+    </Fragment>);
 }
