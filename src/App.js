@@ -4,20 +4,20 @@ import Weather from "./Weather.js";
 
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
+      <div className="container">
       
-      <header className="App-header">
-        
-        <h1>
-          Glory to Ukraine!
-        </h1>
-        <Weather city="Kyiv" />
+        <h1>Weather App</h1>
+        <Weather />
 
-      </header>
+        <footer class="signature">
+            Coded by <a href="https://github.com/OlenaBabko/Weather-App-React"
+              target="_blank" rel="noopener noreferrer">Olena Babko</a>
+        </footer>
+      </div>
     </div>
+    
   );
 }
-
-export default App;
