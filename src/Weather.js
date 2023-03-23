@@ -1,7 +1,8 @@
-import React,  {Fragment} from "react";
-import {useState} from "react";
+import React, {useState} from "react";
+import DateDisplay from "./DateDisplay";
 import "./Weather.css";
 import axios from 'axios';
+
 
 export default function Weather(props) {
     // const [loaded, setLoaded] = useState(false);
@@ -12,7 +13,7 @@ export default function Weather(props) {
         setWeatherData({
             loaded: true,
             city: response.data.name,
-            date: "Tuesday 11:00",
+            date: new Date(response.data.dt *1000),
             description: response.data.weather[0].description,
             // iconUrl: ,
             temperature: response.data.main.temp,
@@ -22,7 +23,7 @@ export default function Weather(props) {
     }
     
     if (weatherData.loaded) {
-        return (<Fragment>
+        return (
             <div className="Weather">
                 <form>
                     <div className="row">
@@ -39,7 +40,7 @@ export default function Weather(props) {
                 <h1>{weatherData.city}</h1>
     
                 <ul>
-                    <li>{weatherData.date}</li>
+                    <li><DateDisplay date={weatherData.date} /></li>
                     <li className="text-capitalize">{weatherData.description}</li>
                 </ul>
     
@@ -75,10 +76,10 @@ export default function Weather(props) {
                 </div>
     
             </div>
-        </Fragment>);
+        );
 
     } else {
-        let city = "Kyiv";
+        // let city = "Kyiv";
         let apiKey = "be60748992fab0f5da8162563fb21245";
         let units = "metric";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
@@ -87,5 +88,3 @@ export default function Weather(props) {
         return "Loading...";
     }    
 }
-
-
