@@ -1,20 +1,39 @@
-import React from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, { useState } from "react";
+import ForecastDay from "./ForecastDay";
 import "./DailyForecast.css";
+import axios from "axios";
 
-export default function DailyForecast() {
-    return (
-    <div className="DailyForecast">
-        <div className="row">
-            <div className="col">
-                <div className="Forecast_Day">Day 1</div>
-                <WeatherIcon code="01d" size={36} />
-                <div className="Forecast_Temperature">
-                    <span className="Forecast_Temperature_min">1°</span>
-                    <span className="Forecast_Temperature_max">10°</span>
+export default function DailyForecast(props) {
+    let [loaded, setLoaded] = useState(false);
+    let [forecast, setForecast] = useState(null);
+    
+    function handleResponse(response) {
+        console.log(response.data);
+        setForecast(response.data.daily);
+        setLoaded(true);
+    }
+
+    if (loaded) {
+        console.log(forecast);
+        return (
+            <div className="DailyForecast">
+                <div className="row">
+                    <div className="col">
+                        <ForecastDay data={forecast[0]} />
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    );
+        );
+
+    } else {
+        let lat = props.coordinates.lat;
+        let lon = props.coordinates.lon;
+        let apiKey = "6d85a1od5b40aa0051a473016f5eet19";
+        // let units = "metric";
+        let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        // let apiKey = "3dce9b1c66837262a25b3f448d354a76";
+        // let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(handleResponse);
+        return "loading...";
+    }
 }
