@@ -20,13 +20,15 @@ export default function Weather(props) {
             icon: response.data.weather[0].icon,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
-            wind: response.data.wind.speed
+            wind: response.data.wind.speed,
+            city: response.data.name
         });
     }
 
     function handleSubmit(event) {
         event.preventDefault();
         search();
+        // alert(city);
     }
 
     function handleCityChange(event) {
