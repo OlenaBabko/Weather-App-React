@@ -6,19 +6,33 @@
     padding: 16px;
     max-width: 700px;
     border-radius: 4px;
+    background-image: url("flower_for_01.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: auto; */
+    box-shadow: 5px 5px 10px #8a8a8a;
+}
+
+.Weather form {
+  margin-bottom: 20px;
+    
 }
 
 .Weather h1 {
     display: block;
-    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-size: 0px;
     font-weight: 100;
     line-height: 29px;
-    margin: 20px 0 0 0;
+    margin: 5px 0 0 0;
+    margin-left: 20px;
 }
 
 .Weather ul {
     margin: 0;
     padding: 0;
+    padding-top: 5px;
+    padding-left: 20px;
 }
 .Weather li {
     font-size: 16px;
@@ -31,6 +45,7 @@
     height: 52px;
     width: 52px;
     margin-top: 5px;
+    margin-left: 20px;         
     margin-right: 10px;
     display: inline-block;
 }
@@ -38,9 +53,10 @@
     font-weight: bold;
     font-weight: 400;
     font-size: 64px;
+    margin-top: 25px;
     line-height: 64px;
     color: rgb(33,33,33);
-    padding-bottom: -30px;
+    /* padding-bottom: -30px; */
 }
 .Weather .units {
     font-weight: 400;
@@ -51,25 +67,31 @@
     line-height: 1;
 }
 
-.Weather button {
+.Weather .button, .searchButton, .currentLocationButton {
     display: block;
-    background: #0d6efd;
+    background: #000000;
     color: white;
     font-size: 16px;
     padding: 5px 12px;
     border: none;
     border-radius: 6px;
-    /* box-shadow: 5px 5px 10px #8a8a8a; */
+    box-shadow: 5px 5px 10px #8a8a8a;
     transition: all 200ms ease-in-out;
-  }
-  .Weather button:hover {
-    opacity: 0.9;
+}
+.Weather .button:hover, .searchButton:hover, .currentLocationButton:hover {
+    opacity: 0.5;
+    background-image: url("flower_for_01.jpg");
     cursor: pointer;
-  }
-  .Weather rowButtons {
-    margin: 5px 0px;
-  }
-  .Weather currentLocationButton {
-    margin: -38px 125px;
+    color: black;
+}
+.Weather .rowButtons {
+    margin: 0px 0px;
+}
+.Weather .currentLocationButton {
+    margin: 0px 15px;
     padding: 7px 12px;
-  }
+}
+
+.Weather .WeatherInfo {
+    margin: 20px 0px;
+}
