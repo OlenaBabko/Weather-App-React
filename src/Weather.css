@@ -50,3 +50,26 @@
     top: -32px;
     line-height: 1;
 }
+
+.Weather button {
+    display: block;
+    background: #0d6efd;
+    color: white;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    /* box-shadow: 5px 5px 10px #8a8a8a; */
+    transition: all 200ms ease-in-out;
+  }
+  .Weather button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .Weather rowButtons {
+    margin: 5px 0px;
+  }
+  .Weather currentLocationButton {
+    margin: -38px 125px;
+    padding: 7px 12px;
+  }
