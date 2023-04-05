@@ -1,7 +1,6 @@
 import React from "react";
 import DateDisplay from "./DateDisplay";
 import WeatherIcon from "./WeatherIcon";
-import "./WeatherInfo.css";
 import Celsius from "./Celsius";
 
 export default function WeatherInfo(props) {
