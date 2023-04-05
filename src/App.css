@@ -1,14 +1,33 @@
 .App {
-    max-width: 700px;
+    /* max-width: 700px; */
+    max-width: 500px;
     margin: 30px auto;
+    
+}
+.App h1 {
+    font-size: 30px;
+    text-align: center;
 }
 
 .App footer {
     font-size: 11px;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 .App footer .Ukr {
     /* position: relative; */
     margin-right: -50px;
-    margin-left: 40px;
+    margin-left: 30px;
+}
+
+.App footer {
+    border-radius: 4px;
+    background-image: url("flower_for_05_.jpg");
+    background-size: cover;
+    box-shadow: 5px 5px 10px #8a8a8a;
+}
+
+.App  .Ukr, .signature {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }

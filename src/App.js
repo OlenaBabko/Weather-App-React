@@ -13,8 +13,8 @@ export default function App() {
         
         <Weather defaultCity="Kyiv"/>
 
-        <footer className="signature row">
-          <div className="col-9">
+        <footer className="row">
+          <div className="signature col-9">
             Coded by <a href="https://github.com/OlenaBabko/Weather-App-React"
               target="_blank" rel="noopener noreferrer">Olena Babko</a>
           </div>
