@@ -8,8 +8,7 @@
     border-radius: 4px;
     background-image: url("flower_for_01.jpg");
     background-size: cover;
-    /* background-repeat: no-repeat;
-    background-size: auto; */
+    background-repeat: no-repeat;
     box-shadow: 5px 5px 10px #8a8a8a;
 }
 
@@ -42,11 +41,9 @@
 }
 
 .Weather canvas {
-    height: 52px;
-    width: 52px;
     margin-top: 5px;
-    margin-left: 20px;         
-    margin-right: 10px;
+    margin-left: 3px;         
+    margin-right: 0px;
     display: inline-block;
 }
 .Weather .temperature {
@@ -54,6 +51,7 @@
     font-weight: 400;
     font-size: 64px;
     margin-top: 25px;
+    margin-left: 10px;
     line-height: 64px;
     color: rgb(33,33,33);
     /* padding-bottom: -30px; */
@@ -94,4 +92,33 @@
 
 .Weather .WeatherInfo {
     margin: 20px 0px;
+}
+/* .Weather .DailyForecast {
+    margin-top: 20px;
+} */
+/* .Weather .Forecast_Day {
+    margin-bottom: 10px;
+    text-align: center;
+} */
+/* .Weather .Forecast_Temperature {
+    padding-left: 00px;
+    margin-left: 0px;
+} */
+.Weather .DailyForecast .col {
+    margin-top: 20px;
+    padding: 0px 00px 0px 20px;
+}
+.Weather .DailyForecast .container {
+    border:1px solid #000000;
+    color: rgb(135,135,135);
+    /* padding: 16px; */
+    max-width: 60px;
+    border-radius: 4px;
+}
+.Weather .forecastDays {
+    text-align: center;
+    /* color: black;
+    font-size: 18px;
+    font-weight: 900; */
+    margin-left: -20px;
 }
