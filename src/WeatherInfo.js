@@ -39,9 +39,10 @@ export default function WeatherInfo(props) {
 
             <div className="row ">
                 <div className="col-7">
-                    <div className="d-flex">
+                    <h2 className="d-flex city">{props.data.city}</h2>
+                    {/* <div className="d-flex city">
                         <h1>{props.data.city}</h1>
-                    </div>
+                    </div> */}
                 </div>
                 <ul className="col-5 ">
                     <li><DateDisplay date={props.data.date} /></li>
@@ -49,9 +50,9 @@ export default function WeatherInfo(props) {
                 </ul>
             </div>
             <div className="row mt-3">
-                <div className="col-7 ">
-                    <div className="d-flex ms-2">
-                        <WeatherIcon code={props.data.icon} size={60} />
+                <div className="col-7 main">
+                    <div className="d-flex ms-2 big">
+                        <WeatherIcon code={props.data.icon} size={56} />
                         <Celsius celsius={props.data.temperature} />
                     </div>
                 </div>
