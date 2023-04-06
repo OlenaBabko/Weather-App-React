@@ -13,7 +13,7 @@ export default function DailyForecast(props) {
 
     function handleResponse(response) {
         console.log(response.data);
-        setForecast(response.data.daily);
+        setForecast(response.data.daily);    //make index+1 (.slice(1,7));
         setLoaded(true);
     }
 
@@ -23,7 +23,7 @@ export default function DailyForecast(props) {
             <div className="DailyForecast">
                 <div className="row">
                     {forecast.map(function (dailyForecast, index) {
-                        if (index < 6) {                                //days to display
+                        if (index > 0 && index < 7) {                                // days to display
                             return (
                                 <div className="col container" key={index}>
                                     <ForecastDay data={dailyForecast} />
@@ -55,8 +55,9 @@ export default function DailyForecast(props) {
         let longitude = props.coordinates.lon;
         // let apiKey = "6d85a1od5b40aa0051a473016f5eet19";
         let apiKey = "e947cb2640f1db92e6a19005bc43b435";
-        // let units = "metric";
-        let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        let units = "metric";
+        // let units = props.unit;
+        let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
         // let apiKey = "3dce9b1c66837262a25b3f448d354a76";
         // let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
