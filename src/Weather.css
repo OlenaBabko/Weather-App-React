@@ -9,6 +9,8 @@
     background-image: url("flower_for_01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center;
     box-shadow: 5px 5px 10px #8a8a8a;
 }
 
@@ -24,7 +26,17 @@
     font-weight: 100;
     line-height: 29px;
     margin: 5px 0 0 0;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+.WeatherInfo .city {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    margin-right: 0px;
+}
+.WeatherInfo .main {
+    padding: 0px;
 }
 
 .Weather ul {
@@ -46,17 +58,17 @@
     margin-right: 0px;
     display: inline-block;
 }
-.Weather .temperature {
+.WeatherInfo .temperature {
     font-weight: bold;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 60px;
     margin-top: 25px;
-    margin-left: 10px;
+    margin-left: 3px;
     line-height: 64px;
     color: rgb(33,33,33);
     /* padding-bottom: -30px; */
 }
-.Weather .units {
+.WeatherInfo .units {
     font-weight: 400;
     font-size: 16px;
     color: rgb(33,33,33);
@@ -64,6 +76,7 @@
     top: -32px;
     line-height: 1;
 }
+
 
 .Weather .button, .searchButton, .currentLocationButton {
     display: block;
@@ -86,8 +99,12 @@
     margin: 0px 0px;
 }
 .Weather .currentLocationButton {
-    margin: 0px 15px;
-    padding: 7px 12px;
+    margin: 3px 0px;
+    padding: 5px 12px;
+}
+.Weather .searchButton {
+    margin: 3px -13px;
+    padding: 5px 12px;
 }
 
 .Weather .WeatherInfo {
