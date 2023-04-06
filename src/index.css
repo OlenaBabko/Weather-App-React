@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background-image: url("snowflake_07.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-origin: border-box;
+    /* background-position: right; */
+    background-position: center;
+  }
