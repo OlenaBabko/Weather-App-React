@@ -5,14 +5,14 @@ import WeatherIcon from "./WeatherIcon";
 export default function ForecastDay(props) {
     const [unit, setUnit] = useState("celsius");
 
-    function convertToFahrenheit(event) {
-        event.preventDefault();
-        setUnit("fahrenheit");
-    }
-    function convertToCelsius(event) {
-        event.preventDefault();
-        setUnit("celsius");
-    }
+    // function convertToFahrenheit(event) {
+    //     event.preventDefault();
+    //     setUnit("fahrenheit");
+    // }
+    // function convertToCelsius(event) {
+    //     event.preventDefault();
+    //     setUnit("celsius");
+    // }
 
     function changeCelsiusFahrenheit(temperature) {
         let roundedTemperature = 0;
