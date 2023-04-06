@@ -3,7 +3,7 @@ import WeatherIcon from "./WeatherIcon";
 
 
 export default function ForecastDay(props) {
-    const [unit, setUnit] = useState("celsius");
+    let unit = props.unit;
 
     // function convertToFahrenheit(event) {
     //     event.preventDefault();
