@@ -4,12 +4,18 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function ForecastDay(props) {
     function minTemperature() {
-        let temperature = Math.round(props.data.temp.min);
-        return `${temperature}`;
+        let minTemperature = Math.round(props.data.temp.min);           //
+        if (props.unit !== "celcius") {
+            minTemperature = Math.round((minTemperature * 9) / 5 +32)
+        }
+        return `${minTemperature}`;
     }
     function maxTemperature() {
-        let temperature = Math.round(props.data.temp.max);
-        return `${temperature}`;
+        let maxTemperature = Math.round(props.data.temp.max);           //
+        if (props.unit !== "celcius") {
+            maxTemperature = Math.round((maxTemperature * 9) / 5 +32)
+        }
+        return `${maxTemperature}`;
     }
     
     function day() {
@@ -32,15 +38,3 @@ export default function ForecastDay(props) {
         </div>
     );
 }
-
-
-
-// function changeCelsiusFahrenheit(temperature) {
-//     let roundedTemperature = 0;
-//     if (unit === "celsius") {
-//       roundedTemperature = Math.round(temperature);
-//     } else {
-//       roundedTemperature = Math.round((temperature * 9) / 5 + 32);
-//     }
-//     return `${roundedTemperature}`;
-// }
