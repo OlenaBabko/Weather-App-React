@@ -26,7 +26,7 @@ export default function DailyForecast(props) {
                         if (index > 0 && index < 7) {                                // days to display
                             return (
                                 <div className="col container" key={index}>
-                                    <ForecastDay data={dailyForecast} />
+                                    <ForecastDay data={dailyForecast}  unit={props.unit} />
                                 </div>
                             );
                         } else {
