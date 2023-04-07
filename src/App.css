@@ -2,10 +2,9 @@
     /* max-width: 700px; */
     max-width: 400px;
     margin: 30px auto;
-    
 }
 .App h1 {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -23,12 +22,13 @@
 .App footer {
     border-radius: 4px;
     background-image: url("flower_for_05_.jpg");
+    background-position: center;
     background-size: cover;
-    
+    /* background-image: url("flower_for_01.jpg");
+    background-position: bottom; */
     background-position: center;
     box-shadow: 5px 5px 10px #8a8a8a;
 }
-
 .App  .Ukr, .signature {
     margin-top: 15px;
     margin-bottom: 0px;
