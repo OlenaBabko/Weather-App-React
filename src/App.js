@@ -18,7 +18,7 @@ export default function App() {
             Coded by <a href="https://github.com/OlenaBabko/Weather-App-React"
               target="_blank" rel="noopener noreferrer">Olena Babko</a>
           </div>
-          <div className="Ukr col-3">
+          <div className="Ukr col-3 ms-0">
             <p>Slava Ukraini!</p>
           </div>
         </footer>

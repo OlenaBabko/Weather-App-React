@@ -33,19 +33,6 @@ export default function DailyForecast(props) {
                             return null;
                         }
                     })}
-                    
-                    {/* <div className="col">
-                        <ForecastDay data={forecast[1]} />
-                    </div>
-                    <div className="col">
-                        <ForecastDay data={forecast[2]} />
-                    </div>
-                    <div className="col">
-                        <ForecastDay data={forecast[3]} />
-                    </div>
-                    <div className="col">
-                        <ForecastDay data={forecast[4]} />
-                    </div> */}
                 </div>
             </div>
         );
@@ -56,7 +43,6 @@ export default function DailyForecast(props) {
         // let apiKey = "6d85a1od5b40aa0051a473016f5eet19";
         let apiKey = "e947cb2640f1db92e6a19005bc43b435";
         let units = "metric";
-        // let units = props.unit;
         let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
         // let apiKey = "3dce9b1c66837262a25b3f448d354a76";
         // let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
