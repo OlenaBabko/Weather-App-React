@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import WeatherInfo from "./WeatherInfo";
 import DailyForecast from "./DailyForecast";
 import "./Weather.css";
-// import CurrentLocation from "./CurrentLocation";
 import axios from 'axios';
 
 
@@ -10,6 +9,7 @@ export default function Weather(props) {
     // const [loaded, setLoaded] = useState(false);
     const [weatherData, setWeatherData] = useState({ loaded: false });
     const [city, setCity] = useState(props.defaultCity);
+    const [unit, setUnit] = useState("celcius");
         
     function handleResponse(response) {
         console.log(response.data);
@@ -56,9 +56,9 @@ export default function Weather(props) {
         console.log(position.coords.latitude, position.coords.longitude);  
         let currentLatitude = position.coords.latitude;
         let currentLongitude = position.coords.longitude;
-        // let units = "metric";
+        let units = "metric";
         let apiKey = "e947cb2640f1db92e6a19005bc43b435";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&appid=${apiKey}&units=metric`;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&appid=${apiKey}&units=${units}`;
         axios.get(apiUrl).then(handleResponse);
     }
 
@@ -67,24 +67,21 @@ export default function Weather(props) {
     if (weatherData.loaded) {
         return (
             <div className="Weather">
-                <WeatherInfo data={weatherData} />
+                <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
                 <form onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="col-3 rowButtons">
-                            <button className = "btn currentLocationButton" onClick={handleCurrentLocation} value="Location">Current</button>
+                            <button type="button" className = "btn currentLocationButton" onClick={handleCurrentLocation} value="Location">Current</button>
                         </div>
-                        <div className="col-6">
+                        <div className="col-5 ">
                             <input type="search" placeholder="Your city is..." className="form-control" autoFocus="on" onChange={handleCityChange} />
                         </div>
                         <div className="col-3 rowButtons">
                             <input type="submit" value="Search" className="btn btn-dark searchButton"/>
-                            {/* <button className = "currentLocationButton" >Current</button> */}
-                            {/* <button className = "currentLocationButton" onClick={handleCurrentLocation} value="Location">Current</button> */}
                         </div>
                     </div>
                 </form>
-                {/* <WeatherInfo data={weatherData} /> */}
-                <DailyForecast coordinates={weatherData.coordinates} />
+                <DailyForecast coordinates={weatherData.coordinates} unit={unit} setUnit={setUnit} />
             </div>
         );
 
