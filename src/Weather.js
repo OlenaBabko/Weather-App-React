@@ -9,7 +9,7 @@ export default function Weather(props) {
     // const [loaded, setLoaded] = useState(false);
     const [weatherData, setWeatherData] = useState({ loaded: false });
     const [city, setCity] = useState(props.defaultCity);
-    const [unit, setUnit] = useState("celcius");
+    const [unit, setUnit] = useState("celsius");
         
     function handleResponse(response) {
         console.log(response.data);

@@ -5,14 +5,14 @@ import WeatherIcon from "./WeatherIcon";
 export default function ForecastDay(props) {
     function minTemperature() {
         let minTemperature = Math.round(props.data.temp.min);           //
-        if (props.unit !== "celcius") {
+        if (props.unit !== "celsius") {
             minTemperature = Math.round((minTemperature * 9) / 5 +32)
         }
         return `${minTemperature}`;
     }
     function maxTemperature() {
         let maxTemperature = Math.round(props.data.temp.max);           //
-        if (props.unit !== "celcius") {
+        if (props.unit !== "celsius") {
             maxTemperature = Math.round((maxTemperature * 9) / 5 +32)
         }
         return `${maxTemperature}`;
