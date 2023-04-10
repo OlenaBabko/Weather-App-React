@@ -14,11 +14,11 @@ export default function App() {
         <Weather defaultCity="Kyiv"/>
 
         <footer className="row">
-          <div className="signature col-9">
+          <div className="signature col-8">
             Coded by <a href="https://github.com/OlenaBabko/Weather-App-React"
               target="_blank" rel="noopener noreferrer">Olena Babko</a>
           </div>
-          <div className="Ukr col-3 ms-0">
+          <div className="Ukr col-4">  {/* ms-0 */}
             <p>Slava Ukraini!</p>
           </div>
         </footer>
