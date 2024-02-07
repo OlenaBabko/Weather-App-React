@@ -1,3 +1,7 @@
+
+![Preview_1](https://github.com/OlenaBabko/Weather-App-React/assets/55389156/9a86c496-77c2-4d5b-ae26-56b8f8ab3fde)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
